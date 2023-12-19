@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const OpenAIChat = async (userMessage) => {
-  const apiKey = 'VITE_CHAT_BOT';
+  const apiKey = process.env.VITE_OPENAI_KEY; // Updated syntax for Vite
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
   try {

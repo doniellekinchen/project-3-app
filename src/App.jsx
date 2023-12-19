@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, } from 'react-router-dom'
 import Home from './components/Home/Home'
 import Login from './components/Login/Login'
 import Navi from './components/Nav/Nav.jsx'
@@ -16,11 +16,11 @@ function App() {
   return (
     <>
     <header>
-    <Home /> 
+    <Home />
     <Navi />
     </header>
       <main className='container'>
-        <Routes>
+        <Routes> 
           <Route path='/login' element= { <Login /> } />
           <Route path='/chat' element={ <Chat /> } />
           <Route path='/forum' element={ <Forum />} />
