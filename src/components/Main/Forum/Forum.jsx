@@ -2,11 +2,11 @@
 import React, { useState } from 'react'
 import PostForm from './PostForm'
 import PostList from './PostList'
+import './forum.css'
 
 
 function Forum() {
     const [posts, setPosts] = useState([]);
-
     const addPost = (newPost) => {
         setPosts([...posts, newPost]);
     }
@@ -17,10 +17,14 @@ function Forum() {
         setPosts(updatedPosts)
     }
     return (
-    <div>
+    <div className='parent'>
         <h1>Forum goes here</h1>
-        <PostForm onAddPost={addPost} />
-        <PostList posts={posts} onDeletePost={handleDeletePost} />
+        <div className='child'>
+        <PostForm className='form' onAddPost={addPost} />
+        </div>
+        <div className='child'>
+        <PostList className='list' posts={posts} onDeletePost={handleDeletePost} />
+        </div>
     </div>
     )
 }

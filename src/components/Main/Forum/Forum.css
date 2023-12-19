@@ -1,0 +1,17 @@
+.child { 
+    float: left; 
+    width: 50%;
+    margin-bottom: 20px; 
+} 
+.form { 
+    background-color: red;
+    margin-right: 10px; 
+    margin-bottom: 10%; 
+    height: 100px; 
+} 
+.list { 
+    margin-left: 10%; 
+    margin-bottom: 10px;
+    height: 100px; 
+    background-color: yellow; 
+}

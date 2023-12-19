@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 function PostList({ posts, onDeletePost }) {
   return (
-    <div>
+    <div className='border border-black'>
       <h2>Posts</h2>
       {posts.map((post, index) => (
         <div key={index}>

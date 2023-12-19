@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const OpenAIChat = async (userMessage) => {
-  const apiKey = process.env.VITE_OPENAI_KEY; // Updated syntax for Vite
+  // eslint-disable-next-line no-undef
+  const apiKey = import.meta.env.VITE_OPENAI_KEY; // Updated syntax for Vite
   const apiUrl = 'https://api.openai.com/v1/chat/completions';
 
   try {
@@ -18,11 +19,21 @@ const OpenAIChat = async (userMessage) => {
       },
     });
 
+    
+  
     return response.data.choices[0].message.content;
   } catch (error) {
-    console.error('Error making OpenAI API request:', error);
-    return 'Error processing request.';
+    if (error.response && error.response.status === 429) {
+      // Handle rate limiting, e.g., wait for a period and retry
+      console.log('Rate limited. Waiting before retrying...');
+      await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 seconds
+      return OpenAIChat(userMessage); // Retry the request
+    } else {
+      console.error('Error making OpenAI API request:', error);
+      return 'Error processing request.';
+    }
   }
 };
+
 
 export default OpenAIChat;

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import { useState } from 'react'
 import OpenAIChat from '../../../config/index'
@@ -7,11 +8,15 @@ const ChatApp = () => {
     const [chatHistory, setChatHistory] = useState([]);
   
     const handleSendMessage = async () => {
+      try {
       const response = await OpenAIChat(userInput);
       setChatHistory([...chatHistory, { role: 'user', content: userInput }, { role: 'assistant', content: response }]);
       setUserInput('');
-    };
-  
+    } catch(err) {
+      console.log('There is an error')
+    }
+  };
+       
     return (
       <div>
         <div>
