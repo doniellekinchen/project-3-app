@@ -21,13 +21,16 @@ const OpenAIChat = async (userMessage) => {
 
     
   
-    return response.data.choices[0].message.content;
+    return response.data.choices[0].message.content; 
+    
   } catch (error) {
+    console.log(error)
     if (error.response && error.response.status === 429) {
       // Handle rate limiting, e.g., wait for a period and retry
       console.log('Rate limited. Waiting before retrying...');
-      await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 seconds
-      return OpenAIChat(userMessage); // Retry the request
+      // await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 seconds
+      // return OpenAIChat(userMessage); // Retry the request
+     
     } else {
       console.error('Error making OpenAI API request:', error);
       return 'Error processing request.';

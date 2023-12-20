@@ -1,38 +1,55 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react'
-import PropTypes from 'prop-types' 
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-function PostForm({onAddPost}) {
-    const [title, setTitle] = useState('')
-    const [body, setBody] = useState('')
+function PostForm({ onAddPost }) {
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
+  const [posts, setPosts] = useState([]);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (title && body) {
-            onAddPost({ title, body })
-            setTitle('')
-            setBody('')
-        }
+  useEffect(() => {
+    let cache = localStorage.getItem('posts');
+    let allPosts = JSON.parse(cache);
+    setPosts(allPosts || []); // Initialize with an empty array if no posts are in the local storage.
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (title && body) {
+      const newPost = { title, body, timeStamp: Date.now() };
+      const updatedPosts = [...posts, newPost];
+      localStorage.setItem('posts', JSON.stringify(updatedPosts));
+      setPosts(updatedPosts);
+      setTitle('');
+      setBody('');
+      onAddPost(newPost);
     }
-    return(
-        <div>
-        <form className='border border-black' onSubmit={handleSubmit}>
-      <label>
-        Title:
-        <input className='border border-black' type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
-      </label> <br />
-      <label>
-        Content: <br/ >
-        <textarea className='border border-black' value={body} onChange={(e) => setBody(e.target.value)} />
-      </label> <br />
-      <button className='border border-black' type="submit">Add Post</button>
-    </form>
+  };
+
+  return (
+    <div>
+      <form className='border border-black' onSubmit={handleSubmit}>
+        <label>
+          Title:
+          <input className='border border-black' type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
+        </label>{' '}
+        <br />
+        <label>
+          Content: <br />
+          <textarea className='border border-black' value={body} onChange={(e) => setBody(e.target.value)} />
+        </label>{' '}
+        <br />
+        <button className='border border-black' type='submit'>
+          Add Post
+        </button>
+      </form>
+
     </div>
-    )
+  );
 }
 
 PostForm.propTypes = {
-    onAddPost: PropTypes.func.isRequired,
-  };
+  onAddPost: PropTypes.func.isRequired,
+};
 
-export default PostForm
+export default PostForm;

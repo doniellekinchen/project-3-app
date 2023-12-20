@@ -1,21 +1,25 @@
-// eslint-disable-next-line no-unused-vars
+// PostList.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function PostList({ posts, onDeletePost }) {
+
+const PostList = ({ posts, onDeletePost }) => {
+
+
   return (
     <div className='border border-black'>
       <h2>Posts</h2>
       {posts.map((post, index) => (
         <div key={index}>
-          <h3>{post.title}</h3>
-          <p>{post.body}</p>
+          <p>
+            {post.title} | {post.body} | {new Date(post.timeStamp).toLocaleString()}
+          </p>
           <button onClick={() => onDeletePost(index)}>Delete</button>
         </div>
       ))}
     </div>
   );
-}
+};
 
 PostList.propTypes = {
   posts: PropTypes.array.isRequired,

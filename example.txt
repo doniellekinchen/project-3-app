@@ -1,0 +1,8 @@
+import useState
+
+const [input, setInput] = useState("")
+const [post, setPost] = useState("")
+
+<input value={input} onChange{() =>setInput(e.target.value)} type="text/>
+
+const currentPosts = [...posts, ]
