@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Align items vertically */
+}
+
+.nav {
+  text-align: center;
+  margin-top: 20px; /* Adjust top margin as needed */
+}
+
+.nav-link {
+  display: block; /* Change to block to center each link */
+  margin-bottom: 10px; /* Adjust bottom margin as needed for spacing between links */
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #187826; /* Adjust the color as needed */
+  display: inline-block; /* Display links inline */
+  margin-right: 20px; /* Adjust right margin as needed for spacing between links */
+  font-family: 'Libre Baskerville', serif;
+}
+
+
+

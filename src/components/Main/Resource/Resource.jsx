@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react'
 import '../Resource/Resource.css'
 
@@ -22,7 +23,9 @@ function Resource() {
 
         return (
             <div className="news-grid">
-              <h1>Resources go here</h1>
+              <h1>Resources</h1>
+              <p>This page was curated (with the help of <a href="NewsAPI.org">NewsAPI</a>) to bring you the best of health wellness news. This page is updated in real-time, so check back often!</p>
+              <br/>
               <div className="grid-container">
                 {Array.isArray(news) &&
                   news.map((article, index) => (

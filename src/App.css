@@ -1,7 +1,17 @@
-:root {
-  --bodyColor: #f4ece5;
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/src/images/afiya.png'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-body {
-  background-color: var(--bodyColor);
+.app-container {
+  width: 100%;
+  max-width: 800px; 
 }

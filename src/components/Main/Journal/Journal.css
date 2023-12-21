@@ -1,0 +1,163 @@
+.header{
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.entryform {
+    position: relative;
+    width: 50%;
+    float: left;
+    font-family: 'Libre Baskerville', serif;
+    background-color: #89c292;
+    padding: 50px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    margin-right: 20%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.here{
+    background-color: #c7eacc;
+    width: 50%;
+    padding: 50px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-bottom: 1px;
+    margin-right: 20%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+
+}
+
+   .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #89c292;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px; 
+    padding: 5px 10px; 
+    width: auto; 
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px; 
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 15px; 
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.button2 {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #89c292;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16px; 
+    padding: 5px 10px; 
+    width: auto; 
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button2 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button2 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px; 
+    transition: 0.5s;
+}
+
+.button2:hover span {
+    padding-right: 15px; 
+}
+
+.button2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.entriestitle{
+    font-size: 50px;
+}
+
+.descript{
+    font-size: 15px;
+}
+
+.entryform-container {
+    margin-bottom: 20px;
+  }
+
+  
+  
+  .entrylist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the column width as needed */
+    align-items: center;
+    gap: 20px; /* Use 'gap' instead of 'column-gap' for better browser support */
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+  }
+  
+  /* Add some space between entries in the list */
+  .entrylist div {
+    margin-bottom: 20px;
+  }
+  
+  .entrytitle {
+    font-size: 30px;
+  }
+  
+  hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+
+  p{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 30px;
+    padding-top: 5%;
+  }

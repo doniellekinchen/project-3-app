@@ -1,0 +1,45 @@
+img {
+    border-color: black;
+    border-radius: 50%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .title {
+    text-align: right;
+    font-size: 15px;
+  }
+  
+  .welcome {
+    font-family: 'Libre Baskerville', serif;
+    text-transform: lowercase;
+    font-size: 15px;
+     gap: 10px;
+  }
+
+  .mean{
+    font-family: 'Petit Formal Script', cursive;
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  .container1{
+    display: grid;
+    align-items: center; 
+    column-gap: 20px;
+    
+   }
+
+   .container2 {
+       position: relative;
+       width: 50%;
+       float: left;
+       margin-right: 10%;
+     }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+  }

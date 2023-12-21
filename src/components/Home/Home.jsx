@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './Home.css'
 
 function Home() {
     const lifeQuestions = [
@@ -38,32 +39,55 @@ function Home() {
        "Where would you choose to travel if money was no object?",
       ];
       
-      const getRandomQuestion = () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps, no-undef
+      const getRandomQuestion = (() => {
         const randomIndex = Math.floor(Math.random() * lifeQuestions.length);
         return lifeQuestions[randomIndex];
-      };
+      });
       
       const [randomQuestion, setRandomQuestion] = useState('')
 
 
       useEffect(() => {
         setRandomQuestion(getRandomQuestion());
-      }, []);
+      }, [getRandomQuestion]);
       
       const handleNewQuestion = () => {
         setRandomQuestion(getRandomQuestion())
       }
 
       return (
-        <div className='text-center'>
-          <p className='text-gray-700'>{randomQuestion}</p>
-          <button
-            className='bg-teal-500 text-white px-4 py-2 mt-4 rounded'
-            onClick={handleNewQuestion}
-          >
-            Get New Question
-          </button>
-        </div>
+        <div>
+   <div className='container2'>
+    <img className='image' src="src/images/clay-banks-POzx_amnWJw-unsplash.jpg" alt="womenhappy" />
+  </div>
+   <div className='container1'>
+    <div className='welcome'>
+      <h1 className='text-center'>Welcome ❤️</h1>
+      <p>Welcome to Afiya (ah-FEE-ya), a space designed for rejuvenation, self-discovery, community building, and resource gathering. While Afiya officially took shape in 2023, the journey began within yourself long ago... the moment you chose to reclaim control of your mental health. While we are at the beginning of our journey, we have exciting plans to expand our resources and features to better cater to the diverse needs of our members.</p> <br />
+    <h1>Self-Reflect..</h1>
+    <h2>Need time to do some self-reflection? Click the button below to see a question!</h2>
+    <br />
+    <p className='text-gray-700'>{randomQuestion}</p>
+    <br/>
+  <button
+    className='text-white px-4 py-2 mt-4 rounded'
+    onClick={handleNewQuestion}
+  >
+    Get New Question
+  </button>
+  </div> 
+    </div> 
+    <br />
+    <br />
+    <br />
+<div>
+    <h1 className='mean'>afiyah (ah-FEE-ya) - Swahili; health, well-being</h1>
+  </div>
+  
+</div> 
+
+
       );
     }
     
