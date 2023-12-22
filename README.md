@@ -30,6 +30,11 @@ Join us on this transformative journey. Contribute, connect, and thrive with Afi
 <li>NewsAPI</li>
 </ul>
 
+<h1>Screenshots</h1>
+<a href="https://ibb.co/JdrvtYx"><img src="https://i.ibb.co/1nRrQCs/Unknown.png" alt="Unknown" border="0"></a>
+<a href="https://ibb.co/k9XQVcJ"><img src="https://i.ibb.co/3McB5hv/Screenshot-2023-12-22-at-10-41-37-AM.png" alt="Screenshot-2023-12-22-at-10-41-37-AM" border="0"></a>
+<a href="https://ibb.co/NZ21yF5"><img src="https://i.ibb.co/PwGT6rK/Screenshot-2023-12-22-at-10-42-43-AM.png" alt="Screenshot-2023-12-22-at-10-42-43-AM" border="0"></a>
+
 <h1>Getting Started:</h1>
 <ul>
 <li>Deployed:</li>
