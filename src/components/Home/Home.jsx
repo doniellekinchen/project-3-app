@@ -59,8 +59,8 @@ function Home() {
       return (
         <div>
    <div className='container2'>
-    <img className='image' src="src/images/clay-banks-POzx_amnWJw-unsplash.jpg" alt="womenhappy" />
-  </div>
+  <img src="https://i.ibb.co/ypDFZ3r/clay-banks-POzx-amn-WJw-unsplash.jpg" alt="clay-banks-POzx-amn-WJw-unsplash" border="0" />
+   </div>
   <br/>
   <br/>
   <br/>

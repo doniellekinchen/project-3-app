@@ -1,6 +1,18 @@
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 20px;
+  width: 100%;
+}
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
 }
 
 .home, .forum, .journal, .resources {

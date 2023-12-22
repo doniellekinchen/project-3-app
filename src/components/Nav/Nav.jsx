@@ -7,8 +7,9 @@ import './Nav.css';
 function Nav() {
   return (
     <div className='container'>
-      <div>
-        <img src="src/images/Untitled design-2.svg" alt="logo" />
+      <div className='logo'>
+     <img src="https://i.ibb.co/sHHRs7G/Untitled-design-2.png" alt="Untitled-design-2" border="0" />
+     </div>
         <div className="nav">
           <nav className='nav-link'>
             <Link to="/home">
@@ -26,7 +27,6 @@ function Nav() {
           </nav>
         </div>
       </div>
-    </div>
   );
 }
 
