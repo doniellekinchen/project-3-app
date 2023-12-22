@@ -5,10 +5,9 @@ import PropTypes from 'prop-types';
 import './Forum.css';
 
 function CommentList({ comments, index, deleteComment }) {
-  console.log(comments)
-  console.log(index)
+
   return (
-    <div className='border border-black'>
+    <div className='list'>
       <h4>Comments</h4>
       {comments[index]?.map((comment, index2) => (
         <div key={index2}>
@@ -19,8 +18,12 @@ function CommentList({ comments, index, deleteComment }) {
           )
           }
          <button onClick={() => deleteComment(index, index2)}>Delete Comment</button>
+         
         </div>
-      ))}
+        ))}
+        <br/>
+      <hr/>
+      <br/>
     </div>
   );
 }

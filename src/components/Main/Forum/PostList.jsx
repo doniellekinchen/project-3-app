@@ -11,7 +11,7 @@ const PostList = ({ posts, onDeletePost, onAddComment, comments, deleteComment }
 
 
   return (
-    <div className='border border-black'>
+    <div className='posts'>
       <h2>Posts</h2>
       {posts.map((post, index) => (
         <div key={index}>

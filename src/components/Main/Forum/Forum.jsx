@@ -39,14 +39,15 @@ function Forum() {
 
   return (
     <div className='parent'>
-      <h1>Forum goes here</h1>
+      <div className='title2'>
+      <h1>Community 🫂</h1>
+      </div>
+      <br/>
       <div className='child'>
-        <PostForm onAddPost={addPost} comments={comments} setComments={setComments} />
+      <PostForm onAddPost={addPost} comments={comments} setComments={setComments} />
       </div>
       <div className='child'>
         <PostList posts={posts} onDeletePost={deletePost} onAddComment={addComment} comments={comments} deleteComment={deleteComment}/>
-        {/* <CommentForm onAddComment={addComment}  />
-        <CommentList comments={comments} onDeleteComment={deleteComment} /> */}
       </div>
     </div>
   );

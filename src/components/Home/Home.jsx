@@ -61,10 +61,16 @@ function Home() {
    <div className='container2'>
     <img className='image' src="src/images/clay-banks-POzx_amnWJw-unsplash.jpg" alt="womenhappy" />
   </div>
+  <br/>
+  <br/>
+  <br/>
    <div className='container1'>
     <div className='welcome'>
       <h1 className='text-center'>Welcome ❤️</h1>
       <p>Welcome to Afiya (ah-FEE-ya), a space designed for rejuvenation, self-discovery, community building, and resource gathering. While Afiya officially took shape in 2023, the journey began within yourself long ago... the moment you chose to reclaim control of your mental health. While we are at the beginning of our journey, we have exciting plans to expand our resources and features to better cater to the diverse needs of our members.</p> <br />
+      <br/>
+  <br/>
+  <br/>
     <h1>Self-Reflect..</h1>
     <h2>Need time to do some self-reflection? Click the button below to see a question!</h2>
     <br />

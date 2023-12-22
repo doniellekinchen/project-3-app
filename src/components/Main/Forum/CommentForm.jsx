@@ -37,7 +37,7 @@ function CommentForm({ onAddComment, index, comments, addComment }) {
   };
 
   return (
-    <div>
+    <div className="form">
       <form className='border border-black' onSubmit={handleSubmit}>
       <label>
         Comment:
@@ -46,15 +46,6 @@ function CommentForm({ onAddComment, index, comments, addComment }) {
       <br />
       <button className='border border-black' type="submit">Add Comment</button>
     </form>
-
-      {/* <div>
-        {comments.map((c, index) => (
-          <div key={index}>
-            <p>{c.body}</p>
-            <button onClick={() => handleDeleteComment(index)}>Delete Comment</button>
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 }

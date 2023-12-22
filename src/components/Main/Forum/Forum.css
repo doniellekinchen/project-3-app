@@ -1,18 +1,37 @@
+.title2 {
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
 
 .child { 
     float: left; 
     width: 50%;
     margin-bottom: 20px; 
+    font-family: 'Libre Baskerville', serif;
+    
 } 
 .form { 
-    background-color: red;
+    /* background-color: blue; */
     margin-right: 10px; 
     margin-bottom: 10%; 
-    height: 100px; 
+    font-family: 'Libre Baskerville', serif;
+    /* height: 100px;  */
 } 
-.list { 
-    margin-left: 10%; 
-    margin-bottom: 10px;
-    height: 100px; 
-    background-color: yellow; 
+
+
+.group {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    
 }
+
+.descript2{
+    font-size: 14px;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+}
+

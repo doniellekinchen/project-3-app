@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import './Forum.css'
 
 // eslint-disable-next-line react/prop-types
 function PostForm({ onAddPost, comments, setComments }) {
@@ -11,7 +12,7 @@ function PostForm({ onAddPost, comments, setComments }) {
   useEffect(() => {
     let cache = localStorage.getItem('posts');
     let allPosts = JSON.parse(cache);
-    setPosts(allPosts || []); // Initialize with an empty array if no posts are in the local storage.
+    setPosts(allPosts || []); 
   }, []);
 
   const handleSubmit = (e) => {
@@ -48,7 +49,15 @@ function PostForm({ onAddPost, comments, setComments }) {
           Add Post
         </button>
       </form>
-
+    <div className='group'>
+      <img src='src/images/naassom-azevedo-Q_Sei-TqSlc-unsplash.jpg' alt='groupofpeople'></img>
+      <br/>
+    </div>
+    <div className='descript2'>
+      <p>
+      Welcome to our vibrant community forum! This space is designed for users like you to share questions, seek advice, and engage in meaningful discussions. Whether you're a seasoned member or a newcomer, feel free to post your inquiries here and tap into the collective wisdom of our community. Let's build a supportive environment where knowledge thrives, and everyone benefits from the power of shared insights. Start a conversation, ask away, and let the collaborative spirit of our forum enhance your experience! 
+      </p>
+    </div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Nav from './components/Nav/Nav.jsx'
 import Forum from './components/Main/Forum/Forum'
 import Resource from './components/Main/Resource/Resource.jsx'
 import Journal from './components/Main/Journal/Journal.jsx'
+import Footer from './components/Footer/Footer.jsx'
 
 
 const App = () => {
@@ -23,9 +24,13 @@ const App = () => {
             <Route path="/forum" element={<Forum />} />
             <Route path="/journal" element={ <Journal />} /> 
             <Route path="/resources" element={<Resource /> } />         
-            
           </Routes>
+          <br/>
+         <div>
+          <Footer />
+          </div>
         </main>
+       
         </div>
 
   );
