@@ -41,4 +41,8 @@ Join us on this transformative journey. Contribute, connect, and thrive with Afi
 <li>Implement Auth0 for better ease and access to more features</li>
 <li>Create a database to find therapist around the country</li>
 <li>Implement a chatbot feature for when you want to chat, but not to a real person.</li>
+<<<<<<< HEAD
 </ul>
+=======
+</ul>
+>>>>>>> 232353d9f4b6631b7612e1c2d0d78ab59035cce3

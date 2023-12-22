@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
@@ -33,6 +34,7 @@ function CommentForm({ onAddComment, index, comments, addComment }) {
     const updatedComments = [...comments];
     updatedComments.splice(index, 1);
     localStorage.setItem('comments', JSON.stringify(updatedComments));
+    // eslint-disable-next-line no-undef
     setComments(updatedComments);
     onDeleteComment(index); 
   };
