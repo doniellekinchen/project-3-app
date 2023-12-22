@@ -88,7 +88,7 @@ function Home() {
     <br />
     <br />
 <div>
-    <h1 className='mean'>afiyah (ah-FEE-ya) - Swahili; health, well-being</h1>
+    <h1 className='mean text-black'>afiyah (ah-FEE-ya) - Swahili; health, well-being</h1>
   </div>
   
 </div> 
