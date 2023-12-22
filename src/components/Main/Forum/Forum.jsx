@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PostForm from './PostForm';
 import PostList from './PostList';
 import CommentForm from './CommentForm';
@@ -9,6 +9,14 @@ function Forum() {
     const [posts, setPosts] = useState([]);
     const [comments, setComments] = useState([]);
   
+    
+
+    useEffect(() => {
+      let cache = localStorage.getItem('posts');
+      let allPosts = JSON.parse(cache);
+      setPosts(allPosts || []); 
+    }, []);
+
     const addPost = (newPost) => {
       setPosts([...posts, newPost]);
     };
@@ -23,9 +31,9 @@ function Forum() {
       setComments([...comments, newComment]);
     };
   
-    const deleteComment = (index) => {
+    const deleteComment = (index1, index2) => {
       const updatedComments = [...comments];
-      updatedComments.splice(index, 1);
+      updatedComments[index1].splice(index2, 1);
       setComments(updatedComments);
     };
 
@@ -33,12 +41,12 @@ function Forum() {
     <div className='parent'>
       <h1>Forum goes here</h1>
       <div className='child'>
-        <PostForm onAddPost={addPost} />
+        <PostForm onAddPost={addPost} comments={comments} setComments={setComments} />
       </div>
       <div className='child'>
-        <PostList posts={posts} onDeletePost={deletePost} />
-        <CommentForm onAddComment={addComment}  />
-        <CommentList comments={comments} onDeleteComment={deleteComment} />
+        <PostList posts={posts} onDeletePost={deletePost} onAddComment={addComment} comments={comments} deleteComment={deleteComment}/>
+        {/* <CommentForm onAddComment={addComment}  />
+        <CommentList comments={comments} onDeleteComment={deleteComment} /> */}
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ function Journal() {
       </div>
       <br/>
     <div className='here'> 
-       <p>add your entry here...🔻</p> <br/>
+       <p className='add'>add your entry here...🔻</p> <br/>
     </div> 
     <div className='entryform'>
       

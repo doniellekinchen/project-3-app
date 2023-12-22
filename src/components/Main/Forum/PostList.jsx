@@ -1,9 +1,13 @@
+/* eslint-disable react/prop-types */
 // PostList.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
+import CommentForm from './CommentForm';
+import CommentList from './CommentList';
+
+const PostList = ({ posts, onDeletePost, onAddComment, comments, deleteComment }) => {
 
 
-const PostList = ({ posts, onDeletePost }) => {
 
 
   return (
@@ -15,6 +19,8 @@ const PostList = ({ posts, onDeletePost }) => {
             {post.title} | {post.body} | {new Date(post.timeStamp).toLocaleString()}
           </p>
           <button onClick={() => onDeletePost(index)}>Delete</button>
+          <CommentForm onAddComment={onAddComment} index={index} comments={comments} />
+          <CommentList comments={comments} deleteComment={deleteComment}  index={index}/>
         </div>
       ))}
     </div>

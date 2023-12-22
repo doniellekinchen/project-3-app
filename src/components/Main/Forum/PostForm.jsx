@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-function PostForm({ onAddPost }) {
+// eslint-disable-next-line react/prop-types
+function PostForm({ onAddPost, comments, setComments }) {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [posts, setPosts] = useState([]);
@@ -19,7 +20,11 @@ function PostForm({ onAddPost }) {
       const newPost = { title, body, timeStamp: Date.now() };
       const updatedPosts = [...posts, newPost];
       localStorage.setItem('posts', JSON.stringify(updatedPosts));
+      const newComment=[]
+      const updatedComments = [...comments, newComment];
+      localStorage.setItem('comments', JSON.stringify(updatedComments));
       setPosts(updatedPosts);
+      setComments(updatedComments)
       setTitle('');
       setBody('');
       onAddPost(newPost);

@@ -1,32 +1,40 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import './Forum.css';
 
 // eslint-disable-next-line react/prop-types
-function CommentForm({ onAddComment }) {
+function CommentForm({ onAddComment, index, comments, addComment }) {
   const [comment, setComment] = useState('');
-  const [comments, setComments] = useState([]);
-
+  // const [comments, setComments] = useState([]);
+ console.log(comments)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (comment) {
       const newComment = { body: comment, timeStamp: Date.now() };
-      const updatedComments = [...comments, newComment];
-      localStorage.setItem('comments', JSON.stringify(updatedComments));
-      setComments(updatedComments);
+      // const updatedComments = [...comments, newComment];
+
+      if (!comments[index]) {
+        comments[index] = []
+      }
+      comments[index].push(newComment)
+     console.log(comments)
+     console.log(comments[index])
+      localStorage.setItem('comments', JSON.stringify(comments));
+      // setComments(comments);
       setComment('');
-      onAddComment(newComment); // Pass the new comment to the parent component
+      onAddComment(comments); 
     }
   };
 
-  // const handleDeleteComment = (index) => {
-  //   const updatedComments = [...comments];
-  //   updatedComments.splice(index, 1);
-  //   localStorage.setItem('comments', JSON.stringify(updatedComments));
-  //   setComments(updatedComments);
-  //   onDeleteComment(index); // Pass the index to the parent component for deletion
-  // };
+  const handleDeleteComment = (index) => {
+    const updatedComments = [...comments];
+    updatedComments.splice(index, 1);
+    localStorage.setItem('comments', JSON.stringify(updatedComments));
+    setComments(updatedComments);
+    onDeleteComment(index); 
+  };
 
   return (
     <div>
@@ -39,14 +47,14 @@ function CommentForm({ onAddComment }) {
       <button className='border border-black' type="submit">Add Comment</button>
     </form>
 
-      <div>
+      {/* <div>
         {comments.map((c, index) => (
           <div key={index}>
             <p>{c.body}</p>
             <button onClick={() => handleDeleteComment(index)}>Delete Comment</button>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

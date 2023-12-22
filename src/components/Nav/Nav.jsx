@@ -11,10 +11,18 @@ function Nav() {
         <img src="src/images/Untitled design-2.svg" alt="logo" />
         <div className="nav">
           <nav className='nav-link'>
-            <Link to="/home" className="nav-item">Home</Link>
-            <Link to="/forum" className="nav-item">Forum</Link>
-            <Link to="/journal" className="nav-item">Journal</Link>
-            <Link to="/resources" className="nav-item">Resources</Link>
+            <Link to="/home">
+              <div className="home">Home</div>
+              </Link>
+            <Link to="/forum">
+              <div className="forum">Forum</div>
+            </Link>
+            <Link to="/journal"> 
+            <div className="journal">Journal</div>
+            </Link>
+            <Link to="/resources"> 
+            <div className="resources">Resources</div>
+            </Link>
           </nav>
         </div>
       </div>
