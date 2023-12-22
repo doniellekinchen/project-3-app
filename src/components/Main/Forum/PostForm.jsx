@@ -50,7 +50,7 @@ function PostForm({ onAddPost, comments, setComments }) {
         </button>
       </form>
     <div className='group'>
-    <img src="https://i.ibb.co/52LGkQN/naassom-azevedo-Q-Sei-Tq-Slc-unsplash.jpg" alt="naassom-azevedo-Q-Sei-Tq-Slc-unsplash" border="0" />      <br/>
+    <img src="https://i.ibb.co/KbCcGHL/naassom-azevedo-Q-Sei-Tq-Slc-unsplash.jpg" alt="naassom-azevedo-Q-Sei-Tq-Slc-unsplash" border="0" />      <br/>
     </div>
     <div className='descript2'>
       <p>
