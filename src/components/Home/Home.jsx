@@ -66,15 +66,15 @@ function Home() {
   <br/>
    <div className='container1'>
     <div className='welcome'>
-      <h1 className='text-center'>Welcome ❤️</h1>
-      <p>Welcome to Afiya (ah-FEE-ya), a space designed for rejuvenation, self-discovery, community building, and resource gathering. While Afiya officially took shape in 2023, the journey began within yourself long ago... the moment you chose to reclaim control of your mental health. While we are at the beginning of our journey, we have exciting plans to expand our resources and features to better cater to the diverse needs of our members.</p> <br />
+      <h1 className='text-center text-black'>Welcome ❤️</h1>
+      <p className='text-black-700'>Welcome to Afiya (ah-FEE-ya), a space designed for rejuvenation, self-discovery, community building, and resource gathering. While Afiya officially took shape in 2023, the journey began within yourself long ago... the moment you chose to reclaim control of your mental health. While we are at the beginning of our journey, we have exciting plans to expand our resources and features to better cater to the diverse needs of our members.</p> <br />
       <br/>
   <br/>
   <br/>
-    <h1 className='text-4xl'>Self-Reflect..💭</h1>
+    <h1 className='text-4xl text-black'>Self-Reflect..💭</h1>
     <h2>Need time to do some self-reflection? Click the button below to see a question!</h2>
     <br />
-    <p className='text-gray-700'>{randomQuestion}</p>
+    <p className='text-black-700'>{randomQuestion}</p>
     <br/>
   <button
     className='text-black px-4 py-2 mt-4 rounded border border-black items-center'
