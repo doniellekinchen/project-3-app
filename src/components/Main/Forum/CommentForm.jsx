@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
@@ -7,13 +8,13 @@ import './Forum.css';
 // eslint-disable-next-line react/prop-types
 function CommentForm({ onAddComment, index, comments, addComment }) {
   const [comment, setComment] = useState('');
-  // const [comments, setComments] = useState([]);
+ 
  console.log(comments)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (comment) {
       const newComment = { body: comment, timeStamp: Date.now() };
-      // const updatedComments = [...comments, newComment];
+      
 
       if (!comments[index]) {
         comments[index] = []

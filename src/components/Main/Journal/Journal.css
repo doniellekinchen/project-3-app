@@ -129,14 +129,14 @@
   
   .entrylist {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust the column width as needed */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
     align-items: center;
-    gap: 20px; /* Use 'gap' instead of 'column-gap' for better browser support */
+    gap: 20px; 
     font-family: 'Libre Baskerville', serif;
     text-align: center;
   }
   
-  /* Add some space between entries in the list */
+  
   .entrylist div {
     margin-bottom: 20px;
   }

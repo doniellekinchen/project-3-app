@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PostForm from './PostForm';
 import PostList from './PostList';
-import CommentForm from './CommentForm';
-import CommentList from './CommentList';
 import './Forum.css';
 
 function Forum() {

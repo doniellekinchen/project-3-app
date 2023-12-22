@@ -13,7 +13,6 @@ function EntryForm({ onAddEntry }) {
     setEntries(allEntries || []);
   }, []);
   
-  // ...
   
   const handleSubmit = (e) => {
     e.preventDefault();
