@@ -1,3 +1,5 @@
+<a href="https://i.ibb.co/sHHRs7G/Untitled-design-2.png"><img src="https://i.ibb.co/sHHRs7G/Untitled-design-2.png" alt="unknown" border="0"></a>
+
 <h1>Afiya: Your Space for Rejuvenation and Community</h1>
 
 Welcome to Afiya (ah-fee-ya), where the journey to self-discovery and mental wellness begins.
