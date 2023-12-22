@@ -71,13 +71,13 @@ function Home() {
       <br/>
   <br/>
   <br/>
-    <h1>Self-Reflect..</h1>
+    <h1 className='text-4xl'>Self-Reflect..💭</h1>
     <h2>Need time to do some self-reflection? Click the button below to see a question!</h2>
     <br />
     <p className='text-gray-700'>{randomQuestion}</p>
     <br/>
   <button
-    className='text-white px-4 py-2 mt-4 rounded'
+    className='text-black px-4 py-2 mt-4 rounded border border-black items-center'
     onClick={handleNewQuestion}
   >
     Get New Question

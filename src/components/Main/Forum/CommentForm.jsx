@@ -39,7 +39,7 @@ function CommentForm({ onAddComment, index, comments, addComment }) {
 
   return (
     <div className="form">
-      <form className='border border-black' onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
       <label>
         Comment:
         <textarea className='border border-black' value={comment} onChange={(e) => setComment(e.target.value)} />

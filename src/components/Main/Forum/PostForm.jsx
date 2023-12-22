@@ -34,7 +34,7 @@ function PostForm({ onAddPost, comments, setComments }) {
 
   return (
     <div>
-      <form className='border border-black' onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <label>
           Title:
           <input className='border border-black' type='text' value={title} onChange={(e) => setTitle(e.target.value)} />
