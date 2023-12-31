@@ -39,7 +39,7 @@ Join us on this transformative journey. Contribute, connect, and thrive with Afi
 
 <h1>Getting Started:</h1>
 <ul>
-<li>Deployed:</li>
+<li>Deployed: https://afiya2023.netlify.app/</li>
 <li>Trello: https://trello.com/invite/b/BQVUwoTR/ATTIa65fdb425c0269c05f9f1276663900a050FDC65D/p3-ideas</li>
 </ul>
 
